@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../../../favicon.ico">
 
-    <title>Homepage</title>
+    <title>Blog</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -28,7 +28,7 @@
       
       <a class="nav-item nav-link" href="#">Twitter</a>
       <a class="nav-item nav-link" href="#">CV</a>
-      <a class="nav-item nav-link" href="{% url 'blog_home' %}">Blog</a>
+      <a class="nav-item nav-link active" href="#">Blog</a>
     </div>
   </div>
 </nav>	
@@ -36,43 +36,25 @@
     </header>
 
     <main role="main">
+	<div class = "container">
 
-      <section class="jumbotron text-center">
-        <div class="container">
-          <h1 class="jumbotron-heading">Hi I'm Gareth</h1>
-          <p class="lead text-muted">This is my site. It shows you what coding stuff I have done and a cool blog. Thanks for visiting.</p>
-          <p>
-            <a href="mailto:gareth.breeze1993@gmail.com" class="btn btn-primary my-2">E-mail me</a>
-            
-          </p>
-        </div>
-      </section>
-
-      <div class="album py-5 bg-light">
-        <div class="container">
-        
-          <div class="row">
-		  {% for job in jobs.all %}
-            <div class="col-md-4">
-              <div class="card mb-4 box-shadow">
-                <img class="card-img-top" src="{{job.image.url}}">
-                <div class="card-body">
-                  <p class="card-text">{{job.summary}}</p>
+      <h1 class = "text-center pt-3"> Welcome to my Blog!</h1>
+	  <br />
+	  <br />
+	  <h2>Latest Posts</h2>
+      <hr />
+	  {% for blog in blogs.all %}
+	  
+			  <p class="card-text"><a href=""><h3>{{blog.title}}</h3></a></p>
+			  <p class="card-text">{{blog.pub_date}}</p>
+			  <br />
+                <img src="{{blog.image.url}}" height=200 width=200>
+                <br />
+				<p class="card-text">{{blog.body}}</p>
                   
-                    
-                  </div>
-                </div>
-              </div>
-			  {% endfor %}
-            </div>
+	  {% endfor %}
             
-            
-                </div>
-              </div>
-            </div>
-
-            
-
+    
     </main>
 
     <footer class="text-muted">
