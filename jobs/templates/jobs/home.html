@@ -2,6 +2,7 @@
 <!doctype html>
 <html lang="en">
   <head>
+     {% load static %} 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -27,7 +28,7 @@
     <div class="navbar-nav ml-auto">
       
       <a class="nav-item nav-link" href="#">Twitter</a>
-      <a class="nav-item nav-link" href="#">CV</a>
+      <a class="nav-item nav-link" href="{% static 'CV-2018.pdf' %}">CV</a>
       <a class="nav-item nav-link" href="{% url 'blog_home' %}">Blog</a>
     </div>
   </div>
@@ -45,6 +46,7 @@
             <a href="mailto:gareth.breeze1993@gmail.com" class="btn btn-primary my-2">E-mail me</a>
             
           </p>
+		  <img src = "{% static 'photo.jpg' %}" height=300 width=500/>
         </div>
       </section>
 

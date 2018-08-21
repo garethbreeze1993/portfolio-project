@@ -123,7 +123,17 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'portfolio/static/')
+]
+# what directories django looks for the static files in. Including ones we've added.
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
+
+
+
+
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # how to tell django where to look for media files we copied and pasted from databases
 # but changed the string to the media directory
