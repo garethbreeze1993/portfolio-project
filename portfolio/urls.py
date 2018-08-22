@@ -23,7 +23,8 @@ import blog.views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',jobs.views.home, name='home'),
-    path('blog/', include('blog.urls')),	
+    path('blog/', include('blog.urls')),
+    path('jobs/job/<int:job_id>/',jobs.views.jobs_specific, name='jobs'),	
    
     	
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) # adding static files where to look for info and url path
