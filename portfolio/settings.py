@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = ')au6p$*nyq!_%l9n7mv#v!ptw$@zhgrz_%g)_s9ab4s)@6m=y9'
+SECRET_KEY = ')au6p$*nyq!_%l9n7mv#v!ptw$@zhgrz_%g)_s9ab4s)@6m=y9' 
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -143,6 +143,6 @@ MEDIA_URL = '/media/'
 
 
 try:
-    from local_settings import *
+    from .local_settings import *
 except ImportError:
     pass 	
