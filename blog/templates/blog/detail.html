@@ -27,7 +27,7 @@
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav ml-auto">
       
-      <a class="nav-item nav-link" href="https://twitter.com/arthur_bramble">Twitter</a>
+      <a class="nav-item nav-link" href="https://www.linkedin.com/in/gareth-breeze-2823b6171/">Linkedin</a>
       <a class="nav-item nav-link" href="{% static 'Gareth_Breeze.pdf' %}">CV</a>
       <a class="nav-item nav-link active" href="{% url 'blog_home' %}">Blog</a>
       <a class="nav-item nav-link" href="https://github.com/garethbreeze1993">GitHub</a>	  
@@ -42,6 +42,7 @@
 
       <h1 class = "text-center pt-3"> {{ blog.title }}</h1>
 	   <p class="text-center">{{blog.pub_date_pretty}}</p>
+	   <hr>
 	   <img class = "mx-auto d-block img-fluid" src="{{blog.image.url}}" height=200 width=200>
 	
 	 
@@ -50,7 +51,7 @@
 			  <br />
                 
                 <br />
-				<p class="card-text">{{blog.body}}</p>
+				<p class="card-text">{{blog.body|safe|linebreaksbr}}</}}</p>
                   
 	
             
